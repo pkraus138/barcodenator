@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import {
   Platform,
   StyleSheet,
-  Text,
   View
 } from 'react-native';
 import { MyText } from './src/components/common/'; 
+import { Button } from 'react-native-elements';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -27,6 +27,11 @@ export default class App extends Component<{}> {
         <MyText style={styles.instructions}>
           {instructions}
         </MyText>
+        <Button
+          large
+          icon={{name: 'envira', type: 'font-awesome'}}
+          title='Sample ui button'
+        />
       </View>
     );
   }
